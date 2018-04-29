@@ -4,7 +4,7 @@ import React from 'react';
 export default class IssueBar extends React.Component {
     render() {
 
-        var date = this.props.issue[2];
+        var date = this.props.issue.date.toString();
         var dateArr = [];
         for(var i=0; i<date.length; i++) {
             dateArr.push(date.charAt(i));
@@ -14,12 +14,15 @@ export default class IssueBar extends React.Component {
         }
 
         return(
-            <div className="issueBar">
+            <div className="issueBar" onClick={this.props.toggleContent}>
                 <div className="issueBarIndex">
-                    {this.props.issue[0]}
+                    {this.props.issue.id}
                 </div>
                 <div className="issueBarTitle">
-                    {this.props.issue[1]}
+                    {this.props.issue.title}
+                </div>
+                <div className="issueBarDateText">
+                    Created on:
                 </div>
                 <div className="issueBarDate">
                     {dateArr}

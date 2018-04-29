@@ -2,16 +2,22 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 
 import Issue from './issue/issue.js';
+import NewIssue from './newissue/new-issue.js';
 
 export default class MainContent extends React.Component {
     render() {
  
-        var issues = [
-            [0, "Issue 1", "18051994", "The content of Issue 1"], 
-            [1, "Issue 2", "17041992", "The content of Issue 2"],
-            [2, "Issue 3", "29042018", "The content of Issue 3"], 
-            [3, "Issue 4", "24022015", "The content of Issue 4"], 
-            [4, "Issue 5", "14011705", "The content of Issue 5"]];
+        var issues = [{
+            id: 0,
+            date: 18051994,
+            title: "Issue 1",
+            content: "All of the content of issue 1 would go here."
+        }, {
+            id: 1,
+            date: 29042018,
+            title: "Issue 2",
+            content: "All of the content of issue 2 would go here."
+        }];
 
         var issuesRender = [];
         for(var i = 0; i<issues.length; i++) {
@@ -22,8 +28,13 @@ export default class MainContent extends React.Component {
         }
 
         return(
-            <div className="issueWrapper">
-                {issuesRender}
+            <div>
+                <div className="issueWrapper">
+                    {issuesRender}
+                </div>
+                <div className="newIssue">
+                    <NewIssue />
+                </div>
             </div>
         )
     }

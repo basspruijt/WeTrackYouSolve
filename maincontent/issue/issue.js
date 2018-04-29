@@ -28,13 +28,13 @@ export default class Issue extends React.Component {
     render() {
         
         var issueRender = [];
-        issueRender.push(<IssueBar issue={this.props.issue} />);
+        issueRender.push(<IssueBar issue={this.props.issue} toggleContent={this.toggleContent.bind(this)} />);
         if(this.state.expanded === true) {
             issueRender.push(<IssueContent issue={this.props.issue} />);
         }
 
         return(
-            <div className="issue" onClick={this.toggleContent}>
+            <div className="issue">
                 {issueRender}
             </div>
         )

@@ -4,7 +4,7 @@ export default class IssueContent extends React.Component {
     render() {
         return(
             <div className="issueContent">
-                {this.props.issue[3]}
+                {this.props.issue.content}
             </div>
         )
     }

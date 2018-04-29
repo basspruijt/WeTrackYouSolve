@@ -8,8 +8,15 @@
     padding: 10px 15px 15px 15px;
 }
 
-.issue {
-    
+.newIssue {
+    background-color: #ddd;
+    border-width: 2px;
+    border-color: #999;
+    border-radius: 4px;
+    border-style: solid;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px 15px 15px 15px;     
 }
 
 .issueBar {
@@ -20,14 +27,10 @@
     margin-top: 5px;
     margin-bottom: 0px;
     font-weight: bold;
-}
+    user-select: none;
+    cursor: pointer;
 
-.issueContent {
-    background: linear-gradient(#ccc, #eee);
-    border: 1px solid #999;
-    border-radius: 0px 0px 5px 5px;
-    padding: 10px;
-    margin-top: 0px;
+    box-sizing: border-box;
 }
 
 .issueBarIndex {
@@ -36,6 +39,27 @@
     border-right: solid grey 1px;
     width: 10%;
     height: 100%;
+
+    box-sizing: border-box;
+}
+
+.issueBarDate {
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+    width: 10%;
+    text-align: right;
+
+    box-sizing: border-box;
+}
+
+.issueBarDateText {
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+    width: 10%;
+    font-weight: bold;
+    color: #666;
+
+    box-sizing: border-box;
 }
 
 .issueBarTitle {
@@ -43,10 +67,85 @@
     padding: 0px 5px 0px 5px;
     border-right: solid grey 1px;
     width: 70%;
+
+    box-sizing: border-box;
 }
 
-.issueBarDate {
+.issueContent {
+    background: linear-gradient(#ccc, #eee);
+    border: 1px solid #999;
+    border-radius: 0px 0px 5px 5px;
+    padding: 10px;
+    margin-top: 0px;
+
+    box-sizing: border-box;
+}
+
+.newIssueBar {
+    background: linear-gradient(#999, #ccc);
+    border: 1px solid #999;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+
+    box-sizing: border-box;
+}
+
+.newIssueBarPriority {
+    display: inline-block;
+    width: 15%;
+    border-right: solid grey 1px;
+    padding: 0px 0px 0px 5px;
+
+    box-sizing: border-box;
+}
+
+
+.priorityDropdownContent {
+    display: none;
+}
+
+.dropdownButton:hover .priorityDropdownContent {
+    display: block;
+}
+
+.newIssueBarTitle {
+    display: inline-block;
+    padding: 0px 5px 0px 5px;
+    border-right: solid grey 1px;
+    width: 55%;
+
+    box-sizing: border-box;
+}
+
+.newIssueBarDate {
     display: inline-block;
     padding: 0px 0px 0px 5px;
-    width: 15%;
+    width: 10%;
+    text-align: right;
+
+    box-sizing: border-box;
+}
+.newIssueBarDateText {
+    display: inline-block;
+    padding: 0px 0px 0px 5px;
+    width: 10%;
+    font-weight: bold;
+    color: #666;
+
+    box-sizing: border-box;
+}
+
+.newIssueTitleInput {
+    font-weight: bold;
+}
+
+.newIssueContentInput {
+    width: 99%;
+    margin: auto;
+    resize: none;
 }
