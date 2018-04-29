@@ -97,6 +97,7 @@
 
 .newIssueBarPriority {
     display: inline-block;
+    padding: 0px 0px 0px 5px;
     width: 15%;
     border-right: solid grey 1px;
     padding: 0px 0px 0px 5px;
